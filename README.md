@@ -1,7 +1,8 @@
-# ETL Pipeline for Retail Sales Data Integration
+# Retail Sales ETL Pipeline (Python)
 
-This repository implements an ETL (Extract, Transform, Load) pipeline to integrate sales data from various sources into a central data warehouse.
+This project implements an ETL (Extract, Transform, Load) pipeline to process retail sales data from multiple sources such as CSV and JSON files and load it into a centralized database for analysis.
 
+This implementation focuses on data cleaning, transformation using pandas, and structured loading into a relational database for reporting and analytics.
 ## Problem
 
 A retail company has sales data scattered across different systems:
@@ -64,3 +65,9 @@ Transformed data is loaded into the data warehouse using SQLAlchemy.
 ## Getting Started
 
 Clone this repository, set up the environment, and customize the connection strings for your data sources. Refer to the provided code comments and explore the scripts for more details.
+
+## Author
+
+Modified and maintained by **Ansh Shukla**.
+
+This project was adapted from an open-source ETL pipeline example and extended for learning purposes.
