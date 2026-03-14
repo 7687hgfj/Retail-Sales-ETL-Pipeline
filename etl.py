@@ -51,13 +51,23 @@ def load_data(transformed_data):
 
 
 def run_etl():
-    # Call extract, transform, and load functions in sequence
-    data_from_source1 = extract_data_from_source1()
-    data_from_source2 = extract_data_from_source2()
-    # ... extract from other sources if needed
+    try:
+        logging.info("Starting ETL pipeline")
 
-    transformed_data = transform_data(data_from_source1, data_from_source2, ...)
+        # Extract
+        logging.info("Extracting data from sources")
+        data_from_source1 = extract_data_from_source1()
+        data_from_source2 = extract_data_from_source2()
 
-    load_data(transformed_data)
+        # Transform
+        logging.info("Transforming data")
+        transformed_data = transform_data(data_from_source1, data_from_source2)
 
-    print("ETL process completed successfully!")
+        # Load
+        logging.info("Loading data into destination database")
+        load_data(transformed_data)
+
+        logging.info("ETL process completed successfully!")
+
+    except Exception as e:
+        logging.error(f"ETL pipeline failed: {e}")
