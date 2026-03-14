@@ -1,7 +1,11 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import json
+import logging
 
-
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.info("ETL pipeline started")
 
 # Define source and destination details
 
